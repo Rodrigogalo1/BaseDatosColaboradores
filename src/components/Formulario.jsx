@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
 import Alert from './Alert';
 
-export const Form = () => {
+export const Form = ({ agregarColaborador }) => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [edad, setEdad] = useState('');
@@ -47,6 +46,7 @@ export const Form = () => {
             setRegistroExitoso(true);
             setError(false);
             setAlerta('Colaborador agregado');
+            agregarColaborador({ nombre, email, edad, cargo: CargoColaborador, telefono: TelefonoColaborador });
         },);
     };
 
