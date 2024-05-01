@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Form } from './components/Formulario';
 import { Listado } from './components/Listado';
+import { BaseColaboradores } from './components/BaseColaboradores';
 
 import './App.css';
 
 function App() {
-  const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState(BaseColaboradores);
 
   const agregarColaborador = (nuevoColaborador) => {
     setColaboradores([...colaboradores, nuevoColaborador]);

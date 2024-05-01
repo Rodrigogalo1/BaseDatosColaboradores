@@ -7,7 +7,7 @@ export const Listado = ({ colaboradores }) => {
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
-          <th scope="col">Email</th>
+          <th scope="col">Correo</th>
           <th scope="col">Edad</th>
           <th scope="col">Cargo</th>
           <th scope="col">Teléfono</th>
