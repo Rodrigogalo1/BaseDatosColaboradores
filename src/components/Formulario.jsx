@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import Alert from './Alert';
 
-export const Form = ({ agregarColaborador }) => {
+export const Form = ({ agregarColaborador, alerta, setAlerta, setError}) => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [edad, setEdad] = useState('');
     const [CargoColaborador, setCargoColaborador] = useState('');
     const [TelefonoColaborador, setTelefonoColaborador] = useState('');
-    const [error, setError] = useState(false);
     const [registroExitoso, setRegistroExitoso] = useState(false);
-    const [alerta, setAlerta] = useState('');
+    
 
     const validarInput = (e) => {
         e.preventDefault();
@@ -105,7 +104,6 @@ export const Form = ({ agregarColaborador }) => {
                 />
             </div>
             <button type="submit" className="btn btn-success">Agregar colaborador</button>
-            {error && <Alert mensaje={alerta} className="Alert" />}
             {registroExitoso && <div className="registro-exitoso">Colaborador agregado !</div>}
         </form>
     );

@@ -1,4 +1,3 @@
-// Buscador.jsx
 import React from 'react';
 
 const Buscador = ({ onBuscar }) => {
